@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+    body{
+        font-family: Arial, sans-serif;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 1.25rem;
+    }
+    ul{
+        padding: 0;
+        list-style-type: none;
+    }
+    ul.menu{
+        background-color: #23abeb;
+        display: flex;
+        flex-direction: column;
+    }
+    ul.menu>li{
+        background-color: #23abeb;
+        margin: 0;
+        padding: 0.62rem;
+        text-align: center;
+        border: 1px solid #868181;
+    }
+
+    @media all and (min-width:600px){
+    ul.menu{
+        flex-flow: row;
+        justify-content: space-around;
+        border: none;
+    } 
+
+    ul.menu>li{
+        border: none;
+    }
+    }
+
+    @media all and (min-width:1024px){
+    ul.menu{
+        justify-content: flex-end;
+    } 
+
+    ul.menu>li{
+        border: none;
+    }
+    }
+
+    </style>
+</head>
+
+<body>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>
