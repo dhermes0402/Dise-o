@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        div#contenido {
+            display: flex;
+            flex-flow: column;
+            background-color: rgb(235, 57, 13);
+
+        }
+
+        div#contenido>article {
+            background-color: rgb(39, 158, 255);
+        }
+
+        div#contenido>aside:nth-child(3) {
+            background-color: rgb(235, 217, 56);
+        }
+        div#contenido>aside:nth-child(4) {
+            background-color: rgb(243, 122, 227);
+        }
+
+        div#contenido>footer {
+            background-color: rgb(158, 243, 89);
+        }
+
+
+        @media all and (min-width:768px) {
+            div#contenido{
+                flex-flow: row wrap ;
+            }
+            header#cabecera,
+            footer#pie{
+                flex-basis: 100%;
+            }
+            div#contenido > article {
+                flex-grow: 2;
+            }
+            div#contenido > footer,
+            div#contenido > aside:nth-child(3){
+                flex-grow: 1;
+            }
+            div#contenido > aside:nth-child(4){
+                flex-grow: 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="contenido">
+        <header>Header</header>
+        <article>Hola soy diego tengo 15 años y soy divertido, a veces salgo a jugar con mi perro,
+            aunque no mucho, suele estar mas juganfo al ajedrez, es algo que me gusta</article>
+        <aside id="aside-1">Aside 1</aside>
+        <aside id="aside-2">Aside 2</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

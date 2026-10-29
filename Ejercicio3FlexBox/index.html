@@ -4,16 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <style>
-    @media all and (min-width:600px){
-        ul.menu{
+    *{
+        box-sizing: border-box;
+    }
+    body{
+       text-align: center; 
+       color: white;
+    }
+    div#contenido{
+        display: flex;
+        flex-flow: column;
+        background-color: rgb(107, 173, 230);
+    }
+    div#contenido > main{
+        display: flex;
+        flex-flow: column;
+        background-color: rgb(255, 190, 49);
+    }
+    div#contenido > main > article {
+        background-color: purple;
+        height: 30vh;
+    }
+    div#contenido > main > aside{
+        background-color: lightblue;
+    }
+    div#contenido > footer{
+        background-color: rgb(110, 158, 247);
+    }
+    div#contenido > main > nav{
+        order: -1;
+    }
+
+    @media all and (min-width:768px){
+        div#contenido > main{
             flex-flow: row;
-            justify-content: space-around;
-            border: none;
-        } 
+        }
+        div#contenido > main > article {
+        flex-grow: 2;
+        }
+        div#contenido > main > nav,
+        div#contenido > main > aside{
+            flex-grow: 1;
+        }
     }
     </style>
+
 </head>
+
 <body>
     <div id="contenido">
         <header>CABECERA</header>
