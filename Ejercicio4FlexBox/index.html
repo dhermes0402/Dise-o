@@ -1,70 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
+    <title>Ejercicio 4 Flexbox</title>
     <style>
-        * {
-            box-sizing: border-box;
+        body {
+            padding: 2em;
         }
 
-        div#contenido {
+        .contenedor {
             display: flex;
-            flex-flow: column;
-            background-color: rgb(235, 57, 13);
-
+            flex-wrap: wrap;
+            font-weight: bold;
+            text-align: center;
         }
 
-        div#contenido>article {
-            background-color: rgb(39, 158, 255);
+    
+        .header,
+        .main,
+        .aside1,
+        .aside2,
+        .footer {
+            padding: 10px;
+            flex: 1 100%;
         }
 
-        div#contenido>aside:nth-child(3) {
-            background-color: rgb(235, 217, 56);
-        }
-        div#contenido>aside:nth-child(4) {
-            background-color: rgb(243, 122, 227);
+        .header {
+            background-color: tomato;
         }
 
-        div#contenido>footer {
-            background-color: rgb(158, 243, 89);
+        .main {
+            background-color: deepskyblue;
+            text-align: left;
         }
 
+        .aside1 {
+            background-color: gold;
+        }
 
-        @media all and (min-width:768px) {
-            div#contenido{
-                flex-flow: row wrap ;
+        .aside2 {
+            background-color: hotpink;
+        }
+
+        .footer {
+            background-color: lightgreen;
+        }
+
+        @media (min-width: 600px) {
+            .aside1,
+            .aside2 {
+                flex: 1 auto;
             }
-            header#cabecera,
-            footer#pie{
-                flex-basis: 100%;
+        }
+
+        @media (min-width: 800px) {
+            .main {
+                flex: 3 0px;
+                order: 2;
             }
-            div#contenido > article {
-                flex-grow: 2;
+
+            .aside1 {
+                order: 1;
             }
-            div#contenido > footer,
-            div#contenido > aside:nth-child(3){
-                flex-grow: 1;
+
+            .aside2 {
+                order: 3;
             }
-            div#contenido > aside:nth-child(4){
-                flex-grow: 2;
+
+            .footer {
+                order: 4;
             }
         }
     </style>
 </head>
 
 <body>
+    <div class="contenedor">
+        <header class="header">Header</header>
 
-    <div id="contenido">
-        <header>Header</header>
-        <article>Hola soy diego tengo 15 años y soy divertido, a veces salgo a jugar con mi perro,
-            aunque no mucho, suele estar mas juganfo al ajedrez, es algo que me gusta</article>
-        <aside id="aside-1">Aside 1</aside>
-        <aside id="aside-2">Aside 2</aside>
-        <footer>Footer</footer>
+        <article class="main">
+            <p>Soy diego voy al parque y juego con mis amigos desde que tengo 15 años, a veces juego con mi hermano.</p>
+        </article>
+
+        <aside class="aside1">Aside 1</aside>
+        <aside class="aside2">Aside 2</aside>
+
+        <footer class="footer">Footer</footer>
     </div>
 </body>
 

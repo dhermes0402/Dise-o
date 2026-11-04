@@ -1,0 +1,32 @@
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #f8fafc;
+    padding: 40px 20px;
+
+  }
+  
+  .galeria {
+    background-color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    
+    /* 1. Convierte esto en un contenedor Flexbox */
+    /* 2. Permite que los elementos pasen a la siguiente fila si no caben */
+    /* 3. Agrega un gap distinto para filas y columnas */
+  }
+  
+  .tarjeta {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    flex: 1 1 200px;
+    background-color: rgb(60, 165, 201);
+    border: 1px solid grey;
+    text-align: center;
+    
+    /* 4. Haz que las tarjetas tengan un tamaño base de 12rem y crezcan de forma equitativa */
+  }
