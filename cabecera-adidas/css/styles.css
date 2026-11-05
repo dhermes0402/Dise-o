@@ -1,0 +1,132 @@
+*{box-sizing: border-box;}
+
+body{
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+a{
+  color: black;
+}
+
+header{
+  display: flex;
+  flex-flow: column;
+}
+
+header > p{
+  margin: 0;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+
+header > p span:first-child{
+  display: none;
+}
+
+header > div:first-of-type{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 16px;
+}
+
+nav#main-menu{ order: 1; }
+svg#usuario{ order: 2; }
+header > div > svg:first-child{
+  order: 3;
+  width: 50px;
+  height: 32px;
+  margin: 0 auto;
+}
+svg#corazon{ order: 4; }
+div#buscador{ order: 5; }
+svg#carro{ order: 6; }
+
+nav#main-menu label span{
+  font-size: 28px;
+}
+
+nav#main-menu input,
+nav#main-menu ul,
+div#buscador input{
+  display: none;
+}
+
+nav#main-menu ul{
+  margin: 0;
+  padding: 0;
+}
+
+nav#main-menu ul li{
+  list-style-type: none;
+}
+
+nav#main-menu ul li a{
+  text-decoration: none;
+}
+
+div#buscador{
+  display: flex;
+  align-items: center;
+}
+
+/* Aviso gris */
+header > div:last-of-type{
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #ececec;
+}
+
+header > div:last-of-type p{
+  flex: 1;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media all and (min-width: 1000px){
+
+  header > p span:first-child{
+    display: inline;
+  }
+
+  nav#main-menu,
+  svg#usuario,
+  header > div > svg:first-child,
+  svg#corazon,
+  div#buscador,
+  svg#carro{
+    order: 0;
+  }
+
+  header > div > svg:first-child{
+    margin: 0;
+  }
+
+  nav#main-menu{
+    margin-left: auto;
+  }
+
+  nav#main-menu label{
+    display: none;
+  }
+
+  nav#main-menu ul{
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+  }
+
+  div#buscador input{
+    display: block;
+    border: 1px solid gray;
+    padding: 6px;
+  }
+}
