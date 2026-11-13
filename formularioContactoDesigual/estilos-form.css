@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* CABECERA */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 4%;
+}
+
+header>picture#logo-cabecera {
+    flex: 50%;
+}
+
+header>picture#logo-cabecera img {
+    width: 120px;
+    height: auto;
+}
+
+header>nav#bloque-iconos {
+    flex: 50%;
+}
+
+header>nav#bloque-iconos ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+header>nav#bloque-iconos i {
+    font-size: 30px;
+}
+
+header>nav#menu-principal {
+    flex: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin-top: 18px;
+}
+
+header #hamburguesa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+header #hamburguesa span:first-child {
+    font-size: 25px;
+}
+
+header #menu {
+    display: none;
+}
+
+/* FORMULARIO */
+main {
+    display: flex;
+    justify-content: center;
+}
+
+section#form-contacto {
+    width: 200px;
+    margin-top: 6px;
+}
+
+section#form-contacto h2 {
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+    margin: 0 0 5px;
+    white-space: nowrap;
+}
+
+form#contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form#contacto label,
+form#contacto #errores {
+    display: none;
+}
+
+form#contacto input,
+form#contacto select,
+form#contacto textarea {
+    width: 100%;
+    border: 1px solid grey;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 13px;
+}
+
+form#contacto input,
+form#contacto select {
+    height: 28px;
+}
+
+form#contacto select {
+    background-color: #ddd;
+    color: grey;
+}
+
+form#contacto #caracteres {
+    color: grey;
+    font-size: 12px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+}
+
+form#contacto textarea {
+    height: 160px;
+}
+
+form#contacto input[type="button"] {
+    background-color: black;
+    color: white;
+}
+
+form#contacto input#nombre {
+    background-color: black;
+    color: white;
+    border: 3px solid grey;
+}
+
+/* El pie no aparece*/
+footer {
+    display: none;
+}
+
+
