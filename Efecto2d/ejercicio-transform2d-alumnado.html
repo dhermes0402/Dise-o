@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probamos todas las transformaciones 2D</title>
+    <style>
+        /* Estilo base para los 4 cuadrados */
+        .caja {
+            width: 6rem;
+            height: 6rem;
+            background-color: #3b82f6;
+            color: white;
+            margin: 1.8rem;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            font-family: sans-serif;
+            transition: transform 0.3s;
+        }
+
+        /* 1. TRANSLATE: Mueve el elemento */
+        .mover:hover {
+            transform: translate(30px, 20px);
+        }
+
+        /* 2. ROTATE: Gira el elemento */
+        .girar:hover {
+            transform: rotate(45deg);
+        }
+
+        /* 3. SCALE: Cambia el tamaño */
+        .escalar:hover {
+            transform: scale(1.5,1.5);
+        }
+
+        /* 4. SKEW: Inclina el elemento */
+        .inclinar:hover {
+            transform: skew(20deg, 20deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja mover">Mover</div>
+    <div class="caja girar">Girar</div>
+    <div class="caja escalar">Agrandar</div>
+    <div class="caja inclinar">Inclinar</div>
+</body>
+
+</html>
